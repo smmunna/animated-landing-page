@@ -65,4 +65,32 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Initialize particles when the page loads
-window.addEventListener('load', createParticles); 
+window.addEventListener('load', createParticles);
+
+// Handle fixed navbar on scroll
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    const scrollTop = document.querySelector('.scroll-to-top');
+    
+    // Toggle navbar background
+    if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+    
+    // Toggle scroll-to-top button
+    if (window.scrollY > 500) {
+        scrollTop.classList.add('visible');
+    } else {
+        scrollTop.classList.remove('visible');
+    }
+});
+
+// Scroll to top functionality
+document.querySelector('.scroll-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}); 
