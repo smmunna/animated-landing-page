@@ -391,4 +391,89 @@ html {
 /* Stagger the animation for each card */
 .service-card:nth-child(n) {
     animation-delay: calc(0.1s * var(--i, 1));
+}
+
+/* Add these styles */
+.service-card.hidden {
+    display: none;
+}
+
+.service-card.visible {
+    display: block;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.view-more-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(45deg, #23d5ab, #23a6d5);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.view-more-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(35, 213, 171, 0.4);
+}
+
+/* Update service grid for 2 rows */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .service-grid {
+        grid-template-columns: repeat(4, 1fr); /* Force 4 columns for larger screens */
+    }
+}
+
+/* Add these styles for all-services page */
+.all-services {
+    padding-top: 120px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.all-services .service-grid {
+    margin-top: 2rem;
+}
+
+.all-services .service-card {
+    display: block !important; /* Override hidden class */
+}
+
+/* Add a back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(45deg, #23d5ab, #23a6d5);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.back-to-top.visible {
+    opacity: 1;
 } 
