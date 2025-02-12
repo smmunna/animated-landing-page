@@ -31,12 +31,130 @@
         <section class="all-services">
             <h1 class="section-title">All API Services</h1>
             <div class="service-grid">
-                <!-- Include all service cards here -->
-                <!-- Copy all service cards from index.html -->
+                <!-- Sports & Entertainment -->
+                <div class="service-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Sports API</h3>
+                    <p>Real-time sports data, scores, and statistics</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-film"></i>
+                    <h3>Movies API</h3>
+                    <p>Comprehensive movie database and information</p>
+                </div>
+
+                <!-- E-commerce & Jobs -->
+                <div class="service-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Products DB</h3>
+                    <p>Extensive product catalog and details</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Jobs API</h3>
+                    <p>Latest job listings and career opportunities</p>
+                </div>
+
+                <!-- Food & Transport -->
+                <div class="service-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Foods API</h3>
+                    <p>Recipe database and nutritional information</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bus"></i>
+                    <h3>Transportation</h3>
+                    <p>Transport routes and scheduling data</p>
+                </div>
+
+                <!-- Science & Tech -->
+                <div class="service-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Science API</h3>
+                    <p>Scientific data and research information</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Technology</h3>
+                    <p>Tech news and product information</p>
+                </div>
+
+                <!-- Developer Tools -->
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Code Snippets API</h3>
+                    <p>Programming examples and code solutions</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>JSON Storage API</h3>
+                    <p>Free JSON storage for quick prototypes</p>
+                </div>
+
+                <!-- Data Generation -->
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>User Generator API</h3>
+                    <p>Generate random user data for testing</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Image Processing API</h3>
+                    <p>Resize, crop, and optimize images</p>
+                </div>
+
+                <!-- Information Services -->
+                <div class="service-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Weather API</h3>
+                    <p>Real-time weather data and forecasts</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>News API</h3>
+                    <p>Latest news from various sources</p>
+                </div>
+
+                <!-- Location & Language -->
+                <div class="service-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Geocoding API</h3>
+                    <p>Convert addresses to coordinates</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Translation API</h3>
+                    <p>Multi-language translation service</p>
+                </div>
             </div>
+
+            <!-- Back to top button -->
+            <a href="#" class="back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
         </section>
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll to top
+        document.querySelector('.back-to-top').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html> 
